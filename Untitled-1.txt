@@ -1,0 +1,23 @@
+// inputGambar.addEventListener('change', function() {
+//   if (inputGambar.files && inputGambar.files[0]) {
+//     const reader = new FileReader();
+//     reader.onload = function(e) {
+//       bgImage.style.backgroundImage = "url('" + e.target.result + "')";
+
+//     }
+//     reader.readAsDataURL(inputGambar.files[0]);
+//   }
+//   else{
+//     alert('gambar kosong')
+//   }
+// });
+
+ <!-- <div class="w-full text-center mx-auto h-full text-white font-bold bg-black/70 pb-24">
+            <img src="./img/jurnal.png" class="scale-50 mx-auto" alt="">
+            <p class="-mt-5">Jurnalistik Spedusa</p>
+            <div class="flex">
+                <a class=" mx-auto mt-6" href="https://www.instagram.com/jurnalistik_spedusa21">
+                    <img src="./img/ig.png" class="h-10 mx-auto" alt="">
+                </a>
+            </div>
+        </div> -->

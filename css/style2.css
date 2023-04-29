@@ -1,0 +1,271 @@
+/* ------------ GOOGLE FONTS ------------ */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+@import url('https://fonts.cdnfonts.com/css/haverbrooke');
+@import url('https://fonts.cdnfonts.com/css/diavlo-black');
+@import url('https://fonts.cdnfonts.com/css/gotham');
+ @import url('https://fonts.cdnfonts.com/css/hero-new');    
+ @import url('https://fonts.cdnfonts.com/css/agenor-neue');  
+ @import url('https://fonts.cdnfonts.com/css/efco-godfrey');
+
+
+* {
+  -webkit-user-select: none;
+  /* Safari */
+  -moz-user-select: none;
+  /* Firefox */
+  -ms-user-select: none;
+  /* IE10+/Edge */
+  user-select: none;
+  /* Standard */
+}
+.popup {
+
+  transition: all;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+  z-index: 100;
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.tombol {
+  z-index: 100;
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background-color: yellow;
+  top: -2%;
+  left: -2%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+  border-radius: 100%;
+}
+
+.popup-content {
+  z-index: 100;
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  height: 80%;
+  background-color: #fff;
+  overflow: visible;
+}
+
+.swiper {
+  width: 100%;
+  transition: transform 1s;
+}
+
+.swiper-wrapper {
+  width: 100%;
+  height: 30em;
+  display: flex;
+  align-items: center;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 1000ms;
+  transition: transform 1s;
+}
+
+@media screen and (min-width: 1024px) {
+  .card {
+    width: 300px;
+    height: 450px;
+    background-color: transparent;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 0;
+    box-shadow: 0px 0px 1em rgba(255, 255, 255, 0.907);
+  }
+}
+@media screen and (max-width: 1024px) {
+  .card {
+    width: 200px;
+    height: 300px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0px 0px 1em rgba(255, 255, 255, 0.907);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 0;
+  }
+}
+.swiper-slide:not(.swiper-slide-active) {
+  filter: blur(1px);
+  box-shadow: 0px 0px 0em rgba(128, 0, 128, 0.636);
+}
+
+.swiper-slide-active {
+  box-shadow: 0px 0px 1em rgba(128, 0, 128, 0.636);
+  animation: naik-turun 5s ease-in-out infinite;
+  transition: transform 1s;
+}
+
+.card__image {
+  width: 10em;
+  height: 10em;
+  border-radius: 50%;
+  border: 5px solid var(--color);
+  padding: 3px;
+  margin: 2em 2em;
+}
+
+.card__image img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.card__content {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.ip {
+  width: 16em;
+  height: 8em;
+}
+.ip__track {
+  stroke: hsl(var(--hue), 90%, 90%);
+  transition: stroke var(--trans-dur);
+}
+.ip__worm1,
+.ip__worm2 {
+  animation: worm1 2s linear infinite;
+}
+.ip__worm2 {
+  animation-name: worm2;
+}
+
+/* Dark theme */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: hsl(var(--hue), 90%, 5%);
+    --fg: hsl(var(--hue), 90%, 95%);
+  }
+  .ip__track {
+    stroke: hsl(var(--hue), 90%, 15%);
+  }
+}
+
+/* Animation */
+@keyframes worm1 {
+  from {
+    stroke-dashoffset: 0;
+  }
+  50% {
+    animation-timing-function: steps(1);
+    stroke-dashoffset: -358;
+  }
+  50.01% {
+    animation-timing-function: linear;
+    stroke-dashoffset: 358;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes worm2 {
+  from {
+    stroke-dashoffset: 358;
+  }
+  50% {
+    stroke-dashoffset: 0;
+  }
+  to {
+    stroke-dashoffset: -358;
+  }
+}
+
+#loader {
+  padding: 1.5em 0;
+}
+
+:root {
+  --hue: 223;
+
+  --trans-dur: 0.3s;
+}
+
+.freeze {
+  animation-play-state: paused !important;
+}
+
+.animasi {
+  position: relative;
+  animation: naik-turun 5s ease-in-out infinite;
+}
+
+@keyframes naik-turun {
+  0% {
+    transform: translateY(-5px);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+  100% {
+    transform: translateY(-5px);
+  }
+}
+
+.geser {
+  position: absolute;
+  animation: geser 15s ease-in-out infinite;
+}
+
+@keyframes geser {
+  0% {
+    transform: translateX(0%);
+  }
+  50% {
+    transform: translateX(50%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  @keyframes geser {
+    0% {
+      transform: translateX(0%);
+    }
+    50% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(0%);
+    }
+  }
+}
+
+.linear-wipe {
+
+  background: linear-gradient(90deg, #5335cf 0%, #de005e 25%, #f66e48 50%, #de005e 75%, #5335cf 100%);
+  background-size: 500%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; 
+  animation: shine 20s linear infinite alternate;
+ 
+}
+
+@keyframes shine {
+  to{
+    background-position: 300%;
+  }
+}
