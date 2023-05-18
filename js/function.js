@@ -109,7 +109,10 @@ $(document).ready(function () {
 });
 
 function loadWeb(){
-  $("#loader").hide();
+  $("#loader").addClass('animate__animated animate__fadeOut');
+  setTimeout(function(){
+    $("#loader").hide();
+  },500)
   $("html").addClass('scroll-smooth')
   $("#konten").show();
 }
