@@ -7,7 +7,7 @@
  @import url('https://fonts.cdnfonts.com/css/agenor-neue');  
  @import url('https://fonts.cdnfonts.com/css/efco-godfrey');
  @import url('https://fonts.cdnfonts.com/css/oxford-street');
-
+ @import url('https://fonts.cdnfonts.com/css/exo-4');
 
 
 * {
@@ -114,6 +114,7 @@
 .swiper-slide:not(.swiper-slide-active) {
   filter: blur(1px);
   box-shadow: 0px 0px 0em rgba(128, 0, 128, 0.636);
+  scale: 0.8;
 }
 
 .swiper-slide-active {

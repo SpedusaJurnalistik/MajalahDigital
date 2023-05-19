@@ -1,5 +1,5 @@
 const swiper = new Swiper(".mySwiper", {
-  effect: "coverflow",
+ 
   grabCursor: false,
   centeredSlides: true,
   slidesPerView: "auto",
@@ -8,10 +8,10 @@ const swiper = new Swiper(".mySwiper", {
   initialSlide: 1,
   speed: 1500,
   longSwipesMs: 5000,
-  spaceBetween: 0,
+  spaceBetween: -10,
   breakpoints: {
     800: {
-      spaceBetween: 200,
+      spaceBetween: 10,
     },
   },
   coverflowEffect: {
@@ -112,9 +112,10 @@ function loadWeb(){
   $("#loader").addClass('animate__animated animate__fadeOut');
   setTimeout(function(){
     $("#loader").hide();
-  },500)
+    $("#konten").show();
+  },1000)
   $("html").addClass('scroll-smooth')
-  $("#konten").show();
+  
 }
 const contactForm = document.getElementById("formcontent");
 contactForm.addEventListener("submit", function (e) {
@@ -129,3 +130,5 @@ contactForm.addEventListener("submit", function (e) {
     location.reload()
   });
 });
+
+AOS.init();
