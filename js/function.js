@@ -8,7 +8,7 @@ const swiper = new Swiper(".mySwiper", {
   initialSlide: 1,
   speed: 1500,
   longSwipesMs: 5000,
-  spaceBetween: 10,
+  spaceBetween: 20,
   breakpoints: {
     800: {
       spaceBetween: 10,
