@@ -113,6 +113,9 @@ function loadWeb(){
   setTimeout(function(){
     $("#loader").hide();
     $("#konten").show();
+    setTimeout(function(){
+      $(".rotate").removeClass('animate__fadeInUp animate__animated')
+    },1000)
   },1000)
   $("html").addClass('scroll-smooth')
   
@@ -130,5 +133,7 @@ contactForm.addEventListener("submit", function (e) {
     location.reload()
   });
 });
+
+
 
 AOS.init();
